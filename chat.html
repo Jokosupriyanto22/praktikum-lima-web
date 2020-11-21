@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat= Joko supriyanto</title>
+    <style>
+        .kotakpesan {
+            border: 5px solid burlywood;
+            width: 500px;
+            height: 300px;
+        }
+        
+        .input {
+            border: 5px solid burlywood;
+            width: 445px;
+        }
+        
+        .kananbawah {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+    <script>
+        function kirimpesan() {
+            let pesan = document.getElementById("pesan").value;
+            document.getElementById("kotakpesan").innerHTML += pesan + "<br/>";
+            document.getElementById("pesan").value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="kananbawah">
+        <div class="kotakpesan" id="kotakpesan">
+        </div>
+        <input type="text" name="pesan" id="pesan" class="input">
+        <input type="Submit" value="Kirim" onclick="kirimpesan()">
+    </div>
+</body>
+
+</html>

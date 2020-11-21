@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>kurs rupiah = nama</title>
+    <style>
+        fieldset {
+            background-color: burlywood;
+        }
+    </style>
+    <script>
+        function menghitung_valas() {
+            let valas = document.getElementById("valas").value;
+            let nilai = document.getElementById("nilai").value;
+            document.getElementById("hasil").value = nilai * valas;
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            krus rupiah- mata uang asing
+        </legend>
+
+        <table>
+            <tr>
+                <td>Masukan nilai</td>
+                <td>Valas</td>
+                <td>Rupiah</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="nilai" id="nilai" onchange="menghitung_valas()"></td>
+                <td>
+                    <select name="valas" id="valas" onchange="menghitung_valas()">
+                    <option value="9915">Dolar US</option>
+                    <option value="13472">Dolar singaure</option>
+                    <option value="874">Ringgit malaysia</option>
+                    <option value="120">yen jepang</option>
+                    <option value="15888">Euro</option>
+                    <option value="3592">Riyal arab saudi</option>
+                </select>
+                </td>
+                <td><input name="text" name="hasil" id="hasil"></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+
+</html>
